@@ -1,6 +1,6 @@
-package cydeo;
+package cydeo.PlayerTask;
 
-public class FootballPlayer extends Player{
+public class FootballPlayer extends Player {
     public FootballPlayer(String name) {
         super(name);
     }

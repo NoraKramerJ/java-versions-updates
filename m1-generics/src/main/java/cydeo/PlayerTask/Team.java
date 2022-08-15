@@ -1,4 +1,6 @@
-package cydeo;
+package cydeo.PlayerTask;
+
+import cydeo.PlayerTask.Player;
 
 import java.util.ArrayList;
 import java.util.List;

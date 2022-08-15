@@ -1,7 +1,9 @@
-import cydeo.BaseballPlayer;
-import cydeo.FootballPlayer;
-import cydeo.SoccerPlayer;
-import cydeo.Team;
+package cydeo.PlayerTask;
+
+import cydeo.PlayerTask.BaseballPlayer;
+import cydeo.PlayerTask.FootballPlayer;
+import cydeo.PlayerTask.SoccerPlayer;
+import cydeo.PlayerTask.Team;
 
 import java.util.ArrayList;
 

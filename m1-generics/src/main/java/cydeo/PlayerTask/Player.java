@@ -1,4 +1,4 @@
-package cydeo;
+package cydeo.PlayerTask;
 
 public abstract class Player {
 
