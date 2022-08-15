@@ -29,12 +29,16 @@ public class main {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
-        Team liverpool= new Team("Liverpool");
-        liverpool.addPlayer(joe);
-        liverpool.addPlayer(pat);
-        liverpool.addPlayer(beckham);
+        Team<SoccerPlayer> liverpool= new Team("Liverpool");
+       // liverpool.addPlayer(joe);
+      // liverpool.addPlayer(pat);
+      liverpool.addPlayer(beckham);
 
+//Team<String> brokenTeam= new Team<String>("what kind of team is this?");
+        /* this is an example that when we extended the T from the parent class Player,
+        it limits the use of T to only player classes(Soccer team, football team, Baseball team).
 
+         */
 
     }
 

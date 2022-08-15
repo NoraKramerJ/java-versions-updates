@@ -3,7 +3,7 @@ package cydeo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T>{
+public class Team <T extends Player>{
 
     private String name;
 
@@ -23,7 +23,7 @@ public class Team <T>{
             return false;
         }else{
             members.add(player);
-            System.out.println(((Player)player).getName()+" picked for the team");
+            System.out.println(((Player)player).getName()+" picked for the team"+this.name);
             return true;
         }
     }
