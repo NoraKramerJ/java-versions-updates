@@ -1,6 +1,7 @@
 import cydeo.BaseballPlayer;
 import cydeo.FootballPlayer;
 import cydeo.SoccerPlayer;
+import cydeo.Team;
 
 import java.util.ArrayList;
 
@@ -25,13 +26,19 @@ public class main {
 
 
         FootballPlayer joe = new FootballPlayer("joe");
-       BaseballPlayer pat = new BaseballPlayer("Pat");
+        BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
+        Team liverpool= new Team("Liverpool");
+        liverpool.addPlayer(joe);
+        liverpool.addPlayer(pat);
+        liverpool.addPlayer(beckham);
 
 
-            }
-    private static void printDoubled (ArrayList < Integer > items) {
+
+    }
+
+    private static void printDoubled(ArrayList<Integer> items) {
         for (Integer i : items) {
             System.out.println(i * 2);
         }
