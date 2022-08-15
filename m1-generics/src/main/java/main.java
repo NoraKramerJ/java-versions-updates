@@ -1,3 +1,7 @@
+import cydeo.BaseballPlayer;
+import cydeo.FootballPlayer;
+import cydeo.SoccerPlayer;
+
 import java.util.ArrayList;
 
 public class main {
@@ -18,6 +22,11 @@ public class main {
 
 
         System.out.println("***********************");
+
+
+        FootballPlayer joe = new FootballPlayer("joe");
+       BaseballPlayer pat = new BaseballPlayer("Pat");
+        SoccerPlayer beckham = new SoccerPlayer("Beckham");
 
 
 
