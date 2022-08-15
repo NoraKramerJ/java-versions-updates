@@ -18,6 +18,8 @@ public class main {
         // to get all constants, we can put it in an array format,
         // then iterate it
 
+
+
         for (Currency currency : currencies) {
             System.out.println(currency);
         }
@@ -42,6 +44,13 @@ public class main {
         }
         System.out.println("Operation task");
         calculate(10,20, PLUS);
+
+
+        System.out.println("How to retrieve the constant value");
+        System.out.println(Currency.PENNY.getValue());
+        System.out.println(Currency.QUARTER.getValue());
+
+
 
     }
     private static void calculate(double x, double y,Operation operation){
