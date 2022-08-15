@@ -1,6 +1,6 @@
 package com.cydeo;
 
-import jdk.swing.interop.SwingInterOpUtils;
+import static com.cydeo.Operation.*;
 
 public class main {
 
@@ -36,6 +36,28 @@ public class main {
             case QUARTER:
                 System.out.println("It is 25 cent");
                 break;
+
+
+
         }
+        System.out.println("Operation task");
+        calculate(10,20, PLUS);
+
     }
-}
+    private static void calculate(double x, double y,Operation operation){
+
+        switch(operation){
+            case PLUS:
+                System.out.println(x+y);
+                break;
+            case MINUS:
+                System.out.println(x-y);
+                break;
+            case MULTIPLY:
+                System.out.println(x*y);
+                break;
+            case DIVIDE:
+                System.out.println(x/y);
+                break;
+        }
+}}
