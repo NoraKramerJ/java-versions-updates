@@ -32,6 +32,8 @@ public class UserTest {
             if (p.test(user)) {
                 System.out.println(user.toString());
             }
+            //another way to do it
+
             Consumer<List<User>> display = i -> System.out.println(i);
             display.accept(users);
             //Print all elements in the list
