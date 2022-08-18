@@ -15,4 +15,3 @@ import lombok.ToString;
        private Color color;
 
     }
-}
