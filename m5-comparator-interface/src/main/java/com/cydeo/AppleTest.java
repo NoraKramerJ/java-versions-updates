@@ -22,12 +22,16 @@ public class AppleTest {
         inventory.sort(comparing(Apple::getWeight));
         System.out.println(inventory);
 
+        System.out.println("____________Reveresed____________");
         //Reveresed
         inventory.sort(comparing(Apple::getWeight).reversed());
         System.out.println(inventory);
 
+        System.out.println("_________Chaining___________");
+//Chaining
 
-
+        inventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));
+        System.out.println(inventory);
 
     }
 }
