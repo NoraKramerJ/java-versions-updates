@@ -18,32 +18,30 @@ public class UserTest {
         users.add(new User("Tom","Evan",25));
         users.add(new User("Emma","Eollard",55));
 
-
+        System.out.println(users);
 
         //Print all elements in the list
-        printName(users,user -> true);
+      /*  printName(users,user -> true);
 
         //Print all people that last name starts with E
         printName(users,user -> user.getLastname().startsWith("E"));
-    }
+    }*/
 
-    private static void printName(List<User> users, Predicate<User> p){
+  /*  private static void printName(List<User> users, Predicate<User> p){
         for(User user : users) {
             if (p.test(user)) {
                 System.out.println(user.toString());
             }
             //another way to do it
-
+*/
             Consumer<List<User>> display = i -> System.out.println(i);
-            display.accept(users);
-            //Print all elements in the list
+           display.accept(users);
+           //Print all elements in the list
             System.out.println("__________________");
-            for (User each : users) {
-                if (each.getLastname().startsWith("E")) {
-                    System.out.println(each);
-                }
-
-            }
+       // Predicate<User> test = p -> p.getLastName().charAt(0) == 'E';
 
 
-        }}}
+    }
+
+
+        }
