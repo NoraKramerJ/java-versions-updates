@@ -1,5 +1,9 @@
 package com.cydeo.task;
 
+import java.util.Comparator;
+
+import static java.util.Comparator.comparing;
+
 public class DishTask {
 
 
@@ -10,6 +14,7 @@ DishData.getAll()
         .stream()
         .filter(i->i.getCalories()<400)
         .map(i->i.getName())
+        // or this way .map(Dish::getName)
         .forEach(System.out::println);
 //Print the length of the name of each dish
         System.out.println("----------------");
@@ -30,9 +35,12 @@ DishData.getAll()
         DishData.getAll()
                 .stream()
                 .filter(i->i.getCalories()<400)
-                .map(i->i.getName())
-                .sorted()
+                .sorted(comparing(Dish::getCalories).reversed())
+                .map(i->i.getName())// this step has to be after sorted
                 .forEach(System.out::println);
+
+
+
     }
 
 }
