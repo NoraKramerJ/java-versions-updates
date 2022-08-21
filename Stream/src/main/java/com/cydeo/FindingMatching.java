@@ -3,6 +3,9 @@ package com.cydeo;
 import com.cydeo.task.Dish;
 import com.cydeo.task.DishData;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -37,8 +40,34 @@ public class FindingMatching {
             System.out.println(dish);// this will return the dish and print Optional with it
 
             //PARALLEL STREAMS(Async)
+            System.out.println("Parallel Stream");
             System.out.println(IntStream.range(0,100).parallel().findAny().getAsInt());
-            System.out.println(IntStream.range(0,100).parallel().findFirst());
+            System.out.println(IntStream.range(0,100).parallel().findFirst().getAsInt());
+
+            List<String> list1= Arrays.asList("Johnny","David","Jack","Duke","Jill","Danny","Julia","Divya");
+            List<String> list2= Arrays.asList("Johnny","David","Jack","Duke","Jill","Danny","Julia","Divya");
+
+            Optional<String> findFirst = list1.parallelStream().filter(s -> s.startsWith("D")).findFirst();
+            Optional<String> findAny = list2.parallelStream().filter(s -> s.startsWith("D")).findAny();
+            System.out.println(findFirst.get());
+            System.out.println(findAny.get());
+
+            System.out.println("When we use Stream");
+            List<String> list3= Arrays.asList("Johnny","David","Jack","Duke","Jill","Danny","Julia","Divya");
+            List<String> list4= Arrays.asList("Johnny","David","Jack","Duke","Jill","Danny","Julia","Divya");
+
+            Optional<String> findFirst2 = list3.stream().filter(s -> s.startsWith("D")).findFirst();
+            Optional<String> findAny2 = list4.stream().filter(s -> s.startsWith("D")).findAny();
+            System.out.println(findFirst2.get());
+            System.out.println(findAny2.get());
+
+            System.out.println("Min and Max");
+            System.out.println("Min");
+          Optional<Dish> dMin= DishData.getAll().stream().min(Comparator.comparing(Dish::getCalories));
+            System.out.println(dMin.get());
+            System.out.println("Max");
+            Optional<Dish> dMax= DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
+            System.out.println("Maximum Calories dish is "+dMax.get().getName()+" "+dMax.get().getCalories());
         }
     }
 }
