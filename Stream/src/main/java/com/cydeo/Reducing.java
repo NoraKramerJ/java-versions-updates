@@ -47,8 +47,14 @@ public class Reducing {
         Optional<Integer> max=numbers.stream().reduce(Integer::max);
         Optional<Integer> sum=numbers.stream().reduce(Integer::sum);
 
-        System.out.println("Min:" + min);
-        System.out.println("Max:" + max);
-        System.out.println("Sum:" + sum);
+        System.out.println("Min:" + min.get());
+        System.out.println("Max:" + max.get());
+        System.out.println("Sum:" + sum.get());
+
+
+        System.out.println("____________Count_______________");
+
+        long DishCount=DishData.getAll().stream().count();
+        System.out.println(DishCount);
     }
 }
