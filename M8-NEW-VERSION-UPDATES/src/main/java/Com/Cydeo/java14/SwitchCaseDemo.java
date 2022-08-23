@@ -89,7 +89,7 @@ public class SwitchCaseDemo {
         };
 
 
-
+        System.out.println(day2);
 
 
 
