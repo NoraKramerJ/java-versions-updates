@@ -14,5 +14,7 @@ public class OrElseThrowDemo {
             //exception handling
         }
         System.out.println(str.orElseThrow());
+
+        //get() will throws you NoSuchElementException but, with orElseThrow, you can throw the exception you want.
     }
 }
